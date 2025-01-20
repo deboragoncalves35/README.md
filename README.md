@@ -71,3 +71,43 @@ void teste_abrir_arquivo() {
         printf("Passou no teste_abrir_arquivo.\n");
     }
 }
+
+void teste_contar_palavras() {
+    Palavra palavras[100];
+    int total_palavras;
+    FILE* arquivo = fopen("teste.txt", "w");
+    fprintf(arquivo, "teste teste palavra");
+    fclose(arquivo);
+    contar_palavras("teste.txt", palavras, &total_palavras);
+    if (total_palavras == 2 && palavras[0].frequencia == 2 && palavras[1].frequencia == 1) {
+        printf("Passou no teste_contar_palavras.\n");
+    } else {
+        printf("Falha no teste_contar_palavras.\n");
+    }
+}
+
+void teste_ordenar_palavras() {
+    Palavra palavras[3] = {
+        {"zebra", 1},
+        {"banana", 2},
+        {"abacaxi", 1}
+    };
+    int total_palavras = 3;
+    ordenar_palavras(palavras, total_palavras);
+    if (strcmp(palavras[0].palavra, "abacaxi") == 0 &&
+        strcmp(palavras[1].palavra, "banana") == 0 &&
+        strcmp(palavras[2].palavra, "zebra") == 0) {
+        printf("Passou no teste_ordenar_palavras.\n");
+    } else {
+        printf("Falha no teste_ordenar_palavras.\n");
+    }
+}
+
+int main() {
+    printf("Iniciando os testes...\n");
+    teste_abrir_arquivo();
+    teste_contar_palavras();
+    teste_ordenar_palavras();
+    printf("Testes concluídos.\n");
+    return 0;
+}
