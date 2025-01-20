@@ -10,3 +10,6 @@ typedef struct {
     char palavra[50];
     int frequencia;
 } Palavra;
+
+void contar_palavras(const char* nome_arquivo, Palavra* palavras, int* total_palavras);
+void ordenar_palavras(Palavra* palavras, int total_palavras);
