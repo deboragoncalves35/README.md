@@ -26,3 +26,6 @@ void contar_palavras(const char* nome_arquivo, Palavra* palavras, int* total_pal
     }
 char palavra_atual[50];
     *total_palavras = 0;
+while (fscanf(arquivo, "%49s", palavra_atual) != EOF) {
+        for (int i = 0; palavra_atual[i]; i++) {
+            palavra_atual[i] = tolower(palavra_atual[i]);
