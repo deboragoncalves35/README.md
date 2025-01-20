@@ -47,3 +47,15 @@ while (fscanf(arquivo, "%49s", palavra_atual) != EOF) {
     }
     fclose(arquivo);
 }
+
+void ordenar_palavras(Palavra* palavras, int total_palavras) {
+    for (int i = 0; i < total_palavras - 1; i++) {
+        for (int j = i + 1; j < total_palavras; j++) {
+            if (strcmp(palavras[i].palavra, palavras[j].palavra) > 0) {
+                Palavra temp = palavras[i];
+                palavras[i] = palavras[j];
+                palavras[j] = temp;
+            }
+        }
+    }
+}
