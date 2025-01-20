@@ -111,3 +111,55 @@ int main() {
     printf("Testes concluídos.\n");
     return 0;
 }
+
+README.md - Histórico de Desenvolvimento e Testes (Simulação de Commits)
+
+## Passo 1: Implementação da Estrutura Inicial
+- **Descrição:** Criação das funções base `contar_palavras` e `ordenar_palavras` no código.
+- **Motivo:** Implementar a funcionalidade de contar e ordenar palavras de um arquivo.
+- **Alterações:**
+  - Criado o tipo `struct Palavra`.
+  - Implementadas funções:
+    - `contar_palavras`: Lê palavras de um arquivo e armazena no vetor.
+    - `ordenar_palavras`: Ordena alfabeticamente o vetor de palavras.
+- **Status:** Concluído.
+
+---
+
+## Passo 2: Escrever o Primeiro Teste (Abrir Arquivo)
+- **Descrição:** Adicionado o teste `teste_abrir_arquivo`.
+- **Motivo:** Garantir que o programa trata corretamente erros ao abrir um arquivo inexistente.
+- **Resultado Esperado:** O programa exibe uma mensagem de erro e não adiciona palavras.
+- **Resultados Obtidos:** 
+  - Teste passou: O programa exibe o erro e mantém `total_palavras = 0`.
+
+---
+
+## Passo 3: Testar a Contagem de Palavras
+- **Descrição:** Criado o teste `teste_contar_palavras` para verificar a contagem de palavras em um arquivo simples.
+- **Motivo:** Certificar que a função `contar_palavras` conta corretamente palavras repetidas.
+- **Resultado Esperado:**
+  - Total de palavras: 2.
+  - Frequência:
+    - `teste`: 2.
+    - `palavra`: 1.
+- **Resultados Obtidos:** Teste passou com sucesso.
+
+---
+
+## Passo 4: Testar a Ordenação
+- **Descrição:** Adicionado o teste `teste_ordenar_palavras` para verificar a ordenação alfabética das palavras.
+- **Motivo:** Certificar que a função `ordenar_palavras` organiza corretamente os dados.
+- **Resultado Esperado:**
+  - Ordem esperada: `abacaxi`, `banana`, `zebra`.
+- **Resultados Obtidos:** Teste passou.
+
+---
+
+## Passo 5: Finalização e Revisão
+- **Descrição:** Revisão final do código.
+- **Alterações:**
+  - Melhoria nos comentários.
+  - Teste adicional para casos de borda (arquivo vazio e arquivo com 1 palavra).
+- **Status:** Concluído.
+*/
