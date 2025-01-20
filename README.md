@@ -24,3 +24,5 @@ void contar_palavras(const char* nome_arquivo, Palavra* palavras, int* total_pal
         *total_palavras = 0;
         return;
     }
+char palavra_atual[50];
+    *total_palavras = 0;
