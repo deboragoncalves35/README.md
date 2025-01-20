@@ -18,4 +18,9 @@ void ordenar_palavras(Palavra* palavras, int total_palavras);
 
 // Simula o arquivo conta_palavras.c
 void contar_palavras(const char* nome_arquivo, Palavra* palavras, int* total_palavras) {
-   
+   FILE* arquivo = fopen(nome_arquivo, "r");
+    if (!arquivo) {
+        printf("Erro ao abrir o arquivo '%s'.\n", nome_arquivo);
+        *total_palavras = 0;
+        return;
+    }
