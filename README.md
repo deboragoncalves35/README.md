@@ -31,3 +31,11 @@ while (fscanf(arquivo, "%49s", palavra_atual) != EOF) {
         for (int i = 0; palavra_atual[i]; i++) {
             palavra_atual[i] = tolower(palavra_atual[i]);
         }
+        int encontrada = 0;
+        for (int i = 0; i < *total_palavras; i++) {
+            if (strcmp(palavras[i].palavra, palavra_atual) == 0) {
+                palavras[i].frequencia++;
+                encontrada = 1;
+                break;
+            }
+        }
