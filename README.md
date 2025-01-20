@@ -5,3 +5,8 @@
 // Simula o arquivo conta_palavras.h
 #ifndef CONTA_PALAVRAS_H
 #define CONTA_PALAVRAS_H
+
+typedef struct {
+    char palavra[50];
+    int frequencia;
+} Palavra;
