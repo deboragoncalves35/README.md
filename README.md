@@ -39,3 +39,11 @@ while (fscanf(arquivo, "%49s", palavra_atual) != EOF) {
                 break;
             }
         }
+        if (!encontrada) {
+            strcpy(palavras[*total_palavras].palavra, palavra_atual);
+            palavras[*total_palavras].frequencia = 1;
+            (*total_palavras)++;
+        }
+    }
+    fclose(arquivo);
+}
