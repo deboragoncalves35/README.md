@@ -59,3 +59,15 @@ void ordenar_palavras(Palavra* palavras, int total_palavras) {
         }
     }
 }
+
+// Simula o arquivo testa_conta_palavras.c
+void teste_abrir_arquivo() {
+    Palavra palavras[100];
+    int total_palavras;
+    contar_palavras("arquivo_inexistente.txt", palavras, &total_palavras);
+    if (total_palavras != 0) {
+        printf("Falha no teste_abrir_arquivo: total_palavras deveria ser 0.\n");
+    } else {
+        printf("Passou no teste_abrir_arquivo.\n");
+    }
+}
